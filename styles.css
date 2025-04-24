@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.calculadora {
+    width: 90%;
+    max-width: 400px;
+    height: 550px;
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.visor {
+    height: 100px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 40px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background: #eaeaea;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    color: #000;
+}
+
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+    flex-grow: 1;
+}
+
+button {
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #f7f7f7;
+    box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #dedede;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.igual {
+    background-color: #3399ff; /* Um tom mais vibrante e limpo */
+    color: white; /* para a letra ficar visível */
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+body.dark-mode .calculadora {
+    background-color: #1e1e1e;
+    border-color: #444;
+}
+
+body.dark-mode .visor {
+    background: #333;
+    color: #f5f5f5;
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode button {
+    background-color: #2a2a2a;
+    color: #f5f5f5;
+    box-shadow: 1px 3px #000000;
+}
+
+body.dark-mode button:hover {
+    background-color: #444;
+}
+
+body.dark-mode button:active {
+    transform: scale(0.95);
+}
+
+#tema {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+body.dark-mode #tema {
+    background-color: #333;
+    color: #fff;
+}
